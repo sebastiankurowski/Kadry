@@ -1,6 +1,8 @@
 package kadry;
 
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -42,29 +44,33 @@ public class Main {
 
             switch (wybranaAkcja) {
                 case 1:
+                    System.out.println("Wprowadź dane nowego pracownika:\n");
                     kadry.dodajPracownikaInteraktywnie();
+                    System.out.println("Wybierz kolejną akcję:");
                     break;
                 case 2:
-                    System.out.println("Średnie zarobki w całej firmie wynoszą " + kadry.sredniZarobek() + "\n\n");
-                    System.out.println("Wybierz kolejną akcję:\n");
+                    System.out.println("Średnie zarobki w całej firmie wynoszą " + kadry.sredniZarobek() + "\n");
+                    System.out.println("Wybierz kolejną akcję:");
                     break;
                 case 3:
                     System.out.println("Podaj numer działu dla którego mam zwrócić średnie zarobki:\n");
                     int numerDzialu = Integer.parseInt(skaner.nextLine());
                     kadry.sredniZarobek(numerDzialu);
                     System.out.println("Średnie zarobki w dziale " + numerDzialu + " wynoszą: " + kadry.sredniZarobek(numerDzialu) + "\n\n");
-                    System.out.println("Wybierz kolejną akcję:\n");
+                    System.out.println("Wybierz kolejną akcję:");
                     break;
-                case 4:
-                    System.out.println(kadry.dajDzialy());
-                    System.out.println("Wybierz kolejną akcję:\n");
+                case 4://TODO
+                    System.out.println("Poniżej lista działów w których aktualnie są zatrudnieni pracownicy:");
+                    System.out.println(kadry.dajDzialy().length);
+                    System.out.println("\nWybierz kolejną akcję:");
                     break;
                 case 5:
                     kadry.pisz();
-                    System.out.println("Wybierz kolejną akcję:\n");
+                    System.out.println("Wybierz kolejną akcję:");
                     break;
-                case 0: //TODO: dlaczego przy wprowadzeniu zera zwraca mi case 0 oraz default?
+                case 0:
                     System.out.println("Zakończono działanie programu. Dziękujemy!\n");
+                    break;
                 default:
                     System.out.println("Wprowadzono błędną wartość.\nSpróbuj ponownie:");
             }

@@ -30,7 +30,7 @@ class Kadry{
             System.out.println("Dodano pracownika nr: " + zatrudnienie + "\n");
         }
         else {
-            System.out.println("Osięgnięto limit pracowników, nie można dodać więcej! Operacja anulowana.");
+            System.out.println("Osięgnięto limit pracowników, nie można dodać więcej! Operacja anulowana.\n");
         }
     }
 
@@ -100,10 +100,13 @@ class Kadry{
         }
         System.out.println("Średnie zarobki w całej firmie wynoszą: " + this.sredniZarobek() + "\n\n");
     }
-//TODO: dokonczyć dajDzialy żeby zwracało unikalne wartości z listy działów
+//TODO: dokonczyć dajDzialy żeby zwracało unikalne wartości z listy działów, albo wpisać to już w Main
     public int[] dajDzialy(){
-        int[] listaDzialow = new int[20];
-        Arrays.stream(listaDzialow);
+        int[] listaDzialow = new int[100];
+
+        if(this.zatrudnienie > 0){
+            for(int i=0; i<zatrudnienie; i++) listaDzialow[i] = pracownicy[i].dzial();
+        }
         return listaDzialow;
     }
 }

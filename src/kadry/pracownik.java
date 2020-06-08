@@ -43,7 +43,7 @@ class Pracownik{
 
     }
 
-    public double dzial(){
+    public int dzial(){
         return this.dzial;
 
     }
