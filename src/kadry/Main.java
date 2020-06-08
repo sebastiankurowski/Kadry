@@ -63,7 +63,7 @@ public class Main {
                     kadry.pisz();
                     System.out.println("Wybierz kolejną akcję:\n");
                     break;
-                case 0:
+                case 0: //TODO: dlaczego przy wprowadzeniu zera zwraca mi case 0 oraz default?
                     System.out.println("Zakończono działanie programu. Dziękujemy!\n");
                 default:
                     System.out.println("Wprowadzono błędną wartość.\nSpróbuj ponownie:");
