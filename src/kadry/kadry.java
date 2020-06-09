@@ -105,8 +105,12 @@ class Kadry{
         int[] listaDzialow = new int[100];
 
         if(this.zatrudnienie > 0){
-            for(int i=0; i<zatrudnienie; i++) listaDzialow[i] = pracownicy[i].dzial();
+            for(int i=0; i<zatrudnienie; i++)
+                    listaDzialow[i] = pracownicy[i].dzial();
         }
+
+        Arrays.sort(listaDzialow);
+
         return listaDzialow;
     }
 }

@@ -2,7 +2,6 @@ package kadry;
 
 import java.util.Arrays;
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 public class Main {
     public static void main(String[] args) {
@@ -61,7 +60,7 @@ public class Main {
                     break;
                 case 4://TODO
                     System.out.println("Poniżej lista działów w których aktualnie są zatrudnieni pracownicy:");
-                    System.out.println(kadry.dajDzialy().length);
+                    System.out.println(Arrays.toString(kadry.dajDzialy()));
                     System.out.println("\nWybierz kolejną akcję:");
                     break;
                 case 5:
