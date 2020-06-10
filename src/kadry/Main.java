@@ -58,9 +58,10 @@ public class Main {
                     System.out.println("Średnie zarobki w dziale " + numerDzialu + " wynoszą: " + kadry.sredniZarobek(numerDzialu) + "\n\n");
                     System.out.println("Wybierz kolejną akcję:");
                     break;
-                case 4://TODO
+                case 4:
                     System.out.println("Poniżej lista działów w których aktualnie są zatrudnieni pracownicy:");
-                    System.out.println(Arrays.toString(kadry.dajDzialy()));
+                    //System.out.println(Arrays.toString(kadry.dajDzialy()));
+                    System.out.println(Arrays.toString(kadry.dajDzialyUnikalne()));
                     System.out.println("\nWybierz kolejną akcję:");
                     break;
                 case 5:
